@@ -137,7 +137,7 @@ function leftPad (str, len, ch) {
   len = len - str.length;
 
   while (true) {
-    // This needs a comment, why a logical and here?
+    // This needs a comment, why a bitwise and here?
     if (len & 1) pad += ch;
     // This needs a comment, why a bit shift here?
     len >>= 1;
@@ -207,7 +207,7 @@ class InventoryList {
               Product
             </th>
           </tr>
-          // We should should something for the null case here if there's
+          // We should show something for the null case here if there's
           // nothing in the data inventory
           {Object.keys(this.data.inventory).map(itemId => (
               <tr key={i}>
